@@ -1,0 +1,17 @@
+<configuration>
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
+
+    <logger name="com.yourcompany.qa" level="DEBUG"/>
+    <logger name="org.openqa.selenium" level="WARN"/>
+    <logger name="org.openqa.selenium.devtools" level="ERROR"/>
+    <logger name="org.openqa.selenium.chromium" level="ERROR"/>
+
+</configuration>
