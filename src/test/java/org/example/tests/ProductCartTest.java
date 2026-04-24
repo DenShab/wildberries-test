@@ -7,17 +7,13 @@ import org.example.pageobjects.ProductPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static io.qameta.allure.SeverityLevel.CRITICAL;
-
 public class ProductCartTest extends TestBase {
 
+    // аннотации были для отчетов Allure и тмс
+    // пронимаю что требований таких не было, это скорее дело привычки и задел на будущее
+    // убрал чтоб не смущали
+    //
     @Test(testName = "Добавление товара в корзину")
-    @Description("Добавление товара в корзину")
-    @Severity(CRITICAL)
-    @Owner("Бойчук Денис")
-    @Link(name = "Website", url = "https://dev.example.com/")
-    @Issue("AUTH-123")
-    @TmsLink("TMS-456")
     public void testProductAddToCart() {
         final ProductPage productPage = new ProductPage(driver);
         productPage

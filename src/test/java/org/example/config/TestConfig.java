@@ -13,7 +13,8 @@ public class TestConfig {
     private final String homeUrl = "https://www.wildberries.by/catalog/264220770/detail.aspx";
 
     public WebDriver createDriver() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver/chromedriver.exe");
+        // Проблема с дравером была в этом, но драйвер я прикладывал.
+        // Убрал System.setProperty("webdriver.chrome.driver"... пусть Selenium Manager работает
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofMillis(5000));

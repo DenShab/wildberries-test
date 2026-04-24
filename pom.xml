@@ -15,7 +15,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <standart.charset>UTF-8</standart.charset>
         <allure.version>2.24.0</allure.version>
-        <aspectj.version>1.8.10</aspectj.version>
+        <!-- Просто обновил версию, видимо когда-то давно подтянул старую и со времен 1.8 не обновлял. Как то жить не мешало-->
+        <aspectj.version>1.9.25.1</aspectj.version>
         <maven.compiler.release>17</maven.compiler.release>
         <jvm.version>17</jvm.version>
     </properties>
