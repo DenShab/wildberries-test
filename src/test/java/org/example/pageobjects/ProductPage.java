@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import io.qameta.allure.Step;
-import org.testng.Assert;
 
 @Slf4j
 public class ProductPage {
@@ -27,21 +25,18 @@ public class ProductPage {
         PageFactory.initElements(driver, this);
     }
 
-    @Step("Добавить продукт в корзину")
     public ProductPage addToCart() {
         addToCartButton.click();
         log.info("Клик по кнопке 'Добавить в корзину'");
         return this;
     }
 
-    @Step("Перейти в корзину")
     public CartPage goToCart() {
         goToCartButton.click();
         log.info("Клик по кнопке 'Корзина'");
         return new CartPage(driver);
     }
 
-    @Step("Проверить наличие продукта в корзине")
     public boolean isProductInCart() {
         return notify.isDisplayed();
     }

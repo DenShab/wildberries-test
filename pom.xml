@@ -16,7 +16,6 @@
         <standart.charset>UTF-8</standart.charset>
         <allure.version>2.24.0</allure.version>
         <!-- Просто обновил версию, видимо когда-то давно подтянул старую и со времен 1.8 не обновлял. Как то жить не мешало-->
-        <aspectj.version>1.9.25.1</aspectj.version>
         <maven.compiler.release>17</maven.compiler.release>
         <jvm.version>17</jvm.version>
     </properties>
@@ -44,40 +43,15 @@
                     </systemPropertyVariables>
                     <argLine>
                         -Dfile.encoding=UTF-8
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.aspectj</groupId>
-                        <artifactId>aspectjweaver</artifactId>
-                        <version>${aspectj.version}</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-            <plugin>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-maven</artifactId>
-                <version>2.12.0</version>
             </plugin>
         </plugins>
     </build>
 
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.qameta.allure</groupId>
-                <artifactId>allure-bom</artifactId>
-                <version>${allure.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <dependencies>
         <!-- TestNG -->
@@ -93,14 +67,6 @@
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>4.43.0</version>
-        </dependency>
-
-        <!-- Allure -->
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>2.34.0</version>
-            <scope>test</scope>
         </dependency>
 
         <dependency>

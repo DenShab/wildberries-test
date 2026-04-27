@@ -1,6 +1,5 @@
 package org.example.tests;
 
-import io.qameta.allure.*;
 import org.example.base.TestBase;
 import org.example.pageobjects.CartPage;
 import org.example.pageobjects.ProductPage;

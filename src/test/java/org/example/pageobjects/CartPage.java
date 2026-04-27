@@ -5,8 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import io.qameta.allure.Step;
-import org.testng.Assert;
 
 @Slf4j
 public class CartPage {
@@ -20,8 +18,6 @@ public class CartPage {
         PageFactory.initElements(driver, this);
     }
 
-
-    @Step("Проверить наличие продукта в корзине")
     public boolean isProductInCart() {
         return cartItem.isDisplayed();
     }
