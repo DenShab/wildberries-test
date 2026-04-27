@@ -37,9 +37,7 @@
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
                     <systemPropertyVariables>
-                        <build.dir>${project.build.directory}/allure-results</build.dir>
-                        <allure.results.directory>${project.build.directory}/allure-results</allure.results.directory>
-                        <application.properties>/application.properties</application.properties>
+                       <application.properties>/application.properties</application.properties>
                     </systemPropertyVariables>
                     <argLine>
                         -Dfile.encoding=UTF-8
